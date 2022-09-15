@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import Dash from "./lib/index";
+import Dash from "react-native-dash-2";
 
 const App: React.FC = () => {
   return (

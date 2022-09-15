@@ -1,6 +1,6 @@
 {
   "name": "react-native-dash-2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fully customizable and easy to use dash component for React Native",
   "main": "./build/dist/index.js",
   "repository": "git@github.com:WrathChaos/react-native-dash-2.git",
@@ -49,9 +49,5 @@
     "husky:commitlint": "npx husky add .husky/commit-msg 'npx --no-install commitlint --edit'",
     "husky:prettier": "npx husky set .husky/pre-commit 'npm run prettier'",
     "husky:lint": "npx husky add .husky/pre-commit 'npm run lint'"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-native": "^0.70.0"
   }
 }

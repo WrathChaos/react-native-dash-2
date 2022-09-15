@@ -14,6 +14,7 @@
   <img alt="React Native Dash 2"
         src="assets/Screenshots/react-native-dash-2.png" />
 </p>
+Image is taken by [react-native-beautiful-timeline](https://github.com/WrathChaos/react-native-beautiful-timeline). This is a usage of the library itself.
 
 # Installation
 

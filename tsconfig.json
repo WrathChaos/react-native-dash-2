@@ -25,7 +25,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "typeRoots": ["./node_modules/@types", "./@types"],
-    "declaration": false /* Generates corresponding '.d.ts' file. */,
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
     "sourceMap": true /* Generates corresponding '.map' file. */
   },
   "exclude": [

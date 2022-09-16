@@ -1,45 +1,26 @@
 import * as React from "react";
-import {
-  View,
-  StyleProp,
-  ViewStyle,
-  StyleSheet,
-  LayoutChangeEvent,
-  PushNotificationIOS,
-} from "react-native";
-import Measure from "./measure";
+import { View, StyleProp, ViewStyle, StyleSheet } from "react-native";
 import { getDashStyle, isStyleRow } from "./utils";
 
-interface DashProps extends State {
-  style?: StyleProp<ViewStyle>;
+export interface DashProps {
+  style: StyleProp<ViewStyle>;
+  dashStyle?: StyleProp<ViewStyle>;
   dashGap?: number;
+  dashColor?: string;
   dashLength?: number;
   dashThickness?: number;
-  height: number;
-  width: number;
-  dashColor?: string;
-  hello: React.ElementType;
-  dashStyle: StyleProp<ViewStyle>;
-  onLayout?: (event: LayoutChangeEvent) => void;
-}
-
-interface State {
-  width: number;
-  height: number;
-  initialRender: boolean;
 }
 
 const Dash: React.FC<DashProps> = ({
   style,
   dashGap = 2,
   dashLength = 4,
-  height,
-  width,
   dashThickness = 2,
   dashColor = "#000",
   dashStyle,
-  onLayout,
 }) => {
+  const [width, setWidth] = React.useState<number>(0);
+  const [height, setHeight] = React.useState<number>(0);
   const isRow = isStyleRow(style);
   const length = isRow ? width : height;
   const n = Math.ceil(length / (dashGap + dashLength));
@@ -52,14 +33,23 @@ const Dash: React.FC<DashProps> = ({
     dashColor,
   });
 
-  const arr = [];
+  const arr: React.ReactElement[] = [];
   for (let index = 0; index < n; index++) {
     arr.push(<View key={index} style={[calculatedDashStyles, dashStyle]} />);
   }
 
+  const measure = ({
+    nativeEvent: {
+      layout: { width: LayoutWidth = 0, height: LayoutHeight = 0 } = {},
+    } = {},
+  }) => {
+    setWidth(LayoutWidth);
+    setHeight(LayoutHeight);
+  };
+
   return (
     <View
-      onLayout={onLayout}
+      onLayout={measure}
       style={[style, isRow ? styles.row : styles.column]}
     >
       {arr}
@@ -67,7 +57,7 @@ const Dash: React.FC<DashProps> = ({
   );
 };
 
-export default Measure(Dash);
+export default Dash;
 
 const styles = StyleSheet.create({
   row: { flexDirection: "row" },

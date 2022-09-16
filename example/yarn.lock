@@ -5833,10 +5833,10 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
-"react-native-dash-2@^0.1.1":
-  "integrity" "sha512-cwkh0hvmcMlzsa/wYUx4YBh4brNSf7D2oSO6p6r+Z2z+dHLIHnjeWdXVanKWvbeyGwe6bK/G54yPKrxTo/oNxg=="
-  "resolved" "https://registry.npmjs.org/react-native-dash-2/-/react-native-dash-2-0.1.1.tgz"
-  "version" "0.1.1"
+"react-native-dash-2@^0.2.2":
+  "integrity" "sha512-0whVTKvnmLoXisTgOxzFpb/a7qIo3xwyXCtyCQs/oRMQROTgffnT1q4UemAe8A2+JGHbvG6tQndR+japsPjmrg=="
+  "resolved" "https://registry.npmjs.org/react-native-dash-2/-/react-native-dash-2-0.2.2.tgz"
+  "version" "0.2.2"
 
 "react-native-gradle-plugin@^0.70.2":
   "integrity" "sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A=="

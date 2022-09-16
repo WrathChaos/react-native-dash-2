@@ -59,13 +59,41 @@ Simply run
 
 should work of the example project.
 
+# Configuration - Props
+
+style: StyleProp<ViewStyle>;
+dashStyle?: StyleProp<ViewStyle>;
+dashGap?: number;
+dashColor?: string;
+dashLength?: number;
+dashThickness?: number;
+
+dashGap = 2,
+dashLength = 4,
+dashThickness = 2,
+dashColor = "#000",
+
+## Fundamentals
+
+| Property |         Type         |  Default  | Description                                                                                                     |
+| -------- | :------------------: | :-------: | --------------------------------------------------------------------------------------------------------------- |
+| style    | StyleProp<ViewStyle> | undefined | set the height and width to make it visible and use `flexDirection: "column"` to make it vertical or horizontal |
+
+## Customization (Optionals)
+
+| Property      |         Type         | Default | Description                  |
+| ------------- | :------------------: | :-----: | ---------------------------- |
+| dashStyle     | StyleProp<ViewStyle> | default | change dashStyle itself      |
+| dashGap       |        number        |    2    | change the each dash's gap   |
+| dashLength    |        number        |    4    | change / set dash length     |
+| dashThickness |        number        |    2    | change each dash's thickness |
+| dashColor     |        color         | "#000"  | change each dash's color     |
+
 ## Credits
 
 Heavily inspired by [react-native-dash](https://github.com/obipawan/react-native-dash)
 Since this library is not updated more than 3 years, we can continue with this project :)
-This library also includes his another library [react-native-measureme](https://github.com/obipawan/react-native-measureme)
 Thank you for the main library for [obipawan](https://github.com/obipawan)
-
 
 ## Future Plans
 

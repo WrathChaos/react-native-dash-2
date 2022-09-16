@@ -61,18 +61,6 @@ should work of the example project.
 
 # Configuration - Props
 
-style: StyleProp<ViewStyle>;
-dashStyle?: StyleProp<ViewStyle>;
-dashGap?: number;
-dashColor?: string;
-dashLength?: number;
-dashThickness?: number;
-
-dashGap = 2,
-dashLength = 4,
-dashThickness = 2,
-dashColor = "#000",
-
 ## Fundamentals
 
 | Property |         Type         |  Default  | Description                                                                                                     |

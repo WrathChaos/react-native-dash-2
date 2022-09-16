@@ -1,6 +1,6 @@
 {
   "name": "react-native-dash-2",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Fully customizable and easy to use dash component for React Native",
   "main": "./build/dist/Dash.js",
   "repository": "git@github.com:WrathChaos/react-native-dash-2.git",

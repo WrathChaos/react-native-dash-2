@@ -3,7 +3,7 @@ import { View, StyleProp, ViewStyle, StyleSheet } from "react-native";
 import { getDashStyle, isStyleRow } from "./utils";
 
 export interface DashProps {
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
   dashStyle?: StyleProp<ViewStyle>;
   dashGap?: number;
   dashColor?: string;
